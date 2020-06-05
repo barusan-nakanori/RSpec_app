@@ -10,6 +10,10 @@ RSpec.describe "Posts", type: :request do
 			it 'リクエストは200 OK となる' do
 				expect(response.status).to eq 200
 			end
+
+			it 'ページ内容が正しいこと' do
+				expect(response.body).to include('ようこそ新規投稿ページへ')
+			end
 		end
 	end
 
